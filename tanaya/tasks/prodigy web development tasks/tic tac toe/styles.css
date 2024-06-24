@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #1a2a6c 0%, #b21f1f 50%, #fdbb2d 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    color: #ffffff;
+}
+
+html {
+    font-size: 14px;
+}
+
+.wrapper {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 30px;
+    border-radius: 15px;
+}
+
+.container {
+    width: 60vmin;
+    height: 60vmin;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2vmin;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 2vmin;
+}
+
+.button-option {
+    background: rgba(255, 255, 255, 0.1);
+    height: 15vmin;
+    width: 15vmin;
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+    font-size: 8vmin;
+    color: #ffffff;
+    box-shadow: 0 0 15px #ffffff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.button-option:hover {
+    background: #ffffff;
+    color: #1a2a6c;
+}
+
+#restart {
+    font-size: 1.5em;
+    padding: 1.2em;
+    border-radius: 10px;
+    background-color: #ffffff;
+    color: #1a2a6c;
+    border: none;
+    margin: 2em auto 0 auto;
+    display: block;
+    cursor: pointer;
+}
+
+#restart:hover {
+    background-color: #fdbb2d;
+}
+
+.popup {
+    background: rgba(0, 0, 0, 0.9);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    z-index: 2;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1.5em;
+    font-size: 14vmin;
+    color: #ffffff;
+}
+
+#new-game {
+    font-size: 0.4em;
+    padding: 0.6em 1.2em;
+    background-color: #ffffff;
+    color: #1a2a6c;
+    border-radius: 0.3em;
+    border: none;
+    cursor: pointer;
+}
+
+#new-game:hover {
+    background-color: #fdbb2d;
+}
+
+#message {
+    font-family: 'Roboto', sans-serif;
+    color: #ffffff;
+    text-align: center;
+    font-size: 0.6em;
+}
+
+.popup.hide {
+    display: none;
+}
+
+@keyframes shine {
+    0%, 100% {
+        box-shadow: 0px 0px 40px -12px rgba(255, 255, 255, 0.6);
+    }
+    50% {
+        box-shadow: 0px 0px 40px 4px rgba(255, 255, 255, 0.6);
+    }
+}
+
+@keyframes starburst {
+    0% {
+        transform: scale(0);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.8);
+        opacity: 0;
+    }
+}
+
+.star {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    animation: starburst 0.7s ease-out forwards;
+}
+
+.button-star {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+button:active .button-star {
+    display: block;
+}
+
+@keyframes title-glow {
+    from {
+        text-shadow: 0 0 25px rgba(255, 255, 255, 0.5), 0 0 35px rgba(255, 255, 255, 0.5);
+    }
+    to {
+        text-shadow: 0 0 35px rgba(255, 255, 255, 0.5), 0 0 45px rgba(255, 255, 255, 0.5);
+    }
+}

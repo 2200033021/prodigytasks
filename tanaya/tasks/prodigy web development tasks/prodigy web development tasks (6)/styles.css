@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to right top, #3498db, #9b59b6); /* Gradient background */
+    transition: all 0.3s ease;
+}
+
+.container {
+    position: relative;
+    width: 400px;
+    height: 600px;
+    background: rgba(255, 255, 255, 0.95); /* White background with opacity */
+    border-radius: 16px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    color: #333; /* Dark text color */
+    transition: all 0.3s ease;
+}
+
+.search-box {
+    position: relative;
+    width: 100%;
+    height: 55px;
+    display: flex;
+    align-items: center;
+}
+
+.search-box i {
+    margin-left: 10px;
+    font-size: 24px;
+    color: #555; /* Icon color */
+}
+
+.search-box input {
+    flex: 1;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.9); /* White background with opacity */
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    font-size: 18px;
+    color: #333; /* Dark text color */
+    padding: 0 20px;
+}
+
+.search-box input::placeholder {
+    color: #777; /* Placeholder text color */
+}
+
+.search-box button {
+    width: 55px;
+    height: 100%;
+    background: #3498db; /* Blue button color */
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    font-size: 24px;
+    color: #fff; /* White text color */
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.search-box button:hover {
+    background: #2980b9; /* Darker blue on hover */
+}
+
+.weather-box {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.weather-box img {
+    width: 60%;
+}
+
+.weather-box .temperature {
+    font-size: 64px;
+    font-weight: 600;
+    margin: 20px 0 10px;
+}
+
+.weather-box .temperature span {
+    font-size: 24px;
+}
+
+.weather-box .description {
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.weather-details {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.weather-details div {
+    flex-basis: 45%;
+    text-align: center;
+}
+
+.weather-details i {
+    font-size: 32px;
+    color: #555; /* Icon color */
+}
+
+.weather-details p {
+    margin-top: 8px;
+    font-size: 16px;
+    font-weight: 500;
+}

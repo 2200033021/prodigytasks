@@ -1,0 +1,100 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #800080, #ff69b4); /* Purple to hot pink */
+  animation: backgroundAnimation 10s infinite alternate;
+}
+
+@keyframes backgroundAnimation {
+  0% {
+    background: linear-gradient(135deg, #800080, #ff69b4);
+  }
+  100% {
+    background: linear-gradient(135deg, #ff69b4, #800080);
+  }
+}
+
+#navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(128, 0, 128, 0.9); /* Semi-transparent purple */
+  backdrop-filter: blur(5px); /* Blur effect for a glassy look */
+  transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+}
+
+.logo {
+  color: #ff69b4; /* Hot pink */
+  font-size: 24px;
+  font-weight: bold;
+  animation: logoAnimation 2s infinite alternate;
+}
+
+@keyframes logoAnimation {
+  0% {
+    transform: scale(1);
+    color: #ff69b4;
+  }
+  100% {
+    transform: scale(1.1);
+    color: #dda0dd;
+  }
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+ul li a {
+  color: #ff69b4; /* Hot pink */
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+ul li a:hover {
+  color: #dda0dd; /* Light purple on hover */
+  transform: scale(1.1); /* Slight zoom effect */
+}
+
+.content {
+  padding-top: 60px; /* Adjust according to navbar height */
+  height: 1500px; /* Just for demonstration */
+}
+
+h2, p {
+  text-align: center;
+  color: #ffffff; /* White */
+  margin: 20px 0;
+  transition: color 0.3s ease, transform 0.3s ease;
+  animation: textAnimation 2s infinite alternate;
+}
+
+@keyframes textAnimation {
+  0% {
+    transform: translateY(0);
+    color: #ffffff;
+  }
+  100% {
+    transform: translateY(-10px);
+    color: #dda0dd;
+  }
+}
+
+h2:hover, p:hover {
+  color: #dda0dd; /* Light purple on hover */
+  transform: translateY(-5px); /* Slight upward movement */
+}
